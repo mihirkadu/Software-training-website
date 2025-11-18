@@ -1,0 +1,541 @@
+ 
+   body {
+  transition: 0.4s ease-in-out;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  animation: bodycolor 20s infinite;
+}
+
+@keyframes bodycolor {
+  0% {
+    background: linear-gradient(135deg, #9d00ff, #571a6f);
+  }
+  30% {
+    background: linear-gradient(135deg, #c889e5, #51d6db);
+  }
+  60% {
+    background: linear-gradient(135deg, #cccfd4, #0b4a4c);
+  }
+  100% {
+    background: linear-gradient(135deg, #63136d, #51d6db);
+  }
+}
+
+    #cwo{
+      border: 2px solid ;
+      border: none;
+      padding: 20px;
+      border-radius: 20px;
+      text-decoration: none;
+      width: 30%
+      
+      
+    }
+    div #cwo:hover {
+      background-color: antiquewhite;
+      color: black;
+    
+    }
+  
+   
+
+    /* ✅ Common container for same width */
+    .container {
+      max-width: 1500px;   /* adjust width here */
+      margin: 0 auto;      /* center the page */
+      padding: 0 20px;     /* left-right spacing */
+    }
+
+    /* Navigation styling */
+    .navbar {
+       background: linear-gradient(135deg, #9babd1, #cfc0d5);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 20px;
+      box-sizing: border-box;
+      height: 100px;
+      border-radius: 50px;
+      overflow: hidden;
+    }
+
+    /* Logo styling */
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: red;
+      font-size: 22px;
+      font-weight: bold;
+      text-transform: uppercase;
+      border-radius: 25px;
+    }
+   #img {
+    width: 90%;
+    height: 500px;
+    margin-left: 70px;
+
+    /* important for background to show */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    animation: changeBg 10s infinite;
+}
+
+@keyframes changeBg {
+    0% { background-image: url("Software_Training_Institute.png"); }
+    33%  { background-image: url("aboutimg.png"); }
+    66%  { background-image: url("homepic.webp"); }
+    100% { background-image: url("Software_Training_Institute.png"); }
+}
+
+    .logo img {
+      width: 80px;
+      height: auto;
+      object-fit: contain;
+      display: block;
+    }
+
+    .logo span {
+      font-size: 14px;
+      color: #222;
+      text-transform: none;
+    }
+
+    /* Hide checkbox by default */
+    #menu-toggle {
+      display: none;
+      
+    }
+
+    .menu-icon {
+      display: none;
+      font-size: 26px;
+      color: white;
+      cursor: pointer;
+    }
+
+    /* Nav list styling */
+    .navbar ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar li {
+      margin-left: 15px;
+    }
+
+    .navbar li a {
+      padding: 10px 15px;
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      transition: 0.4s ease-in-out;
+      border: 2px solid black;
+      border-radius: 20px;
+      overflow: hidden;
+      margin-right: 20px;
+      overflow: hidden;
+    }
+
+    .navbar li a:hover {
+      background-color: rgb(246, 69, 175);
+      
+      
+
+
+    }
+   
+    
+
+    /* ✅ All images fit the same width */
+    img {
+      width: 500px;
+       height: 250px;
+      height: auto;
+      border-radius: 8px;
+       
+    }
+    .pics{
+    width: 90%;
+    height: 500px;
+    margin-left: 50px;
+    }
+   
+
+    /* Hover effect */
+    .logo img:hover {
+      transform: scale(1.03);
+      cursor: pointer;
+      box-shadow: 0 0 30px red;
+      border-radius: 10px;
+      transition: 0.3s;
+      width: 50%;
+    }
+
+     /*h2 {
+      
+      color: lightcyan;
+    font-size: 35px;
+      text-shadow: #9babd1;
+      font-weight: bold;
+      text-decoration: underline;
+    }*/
+    h1{
+       color: lightcyan;
+    font-size: 40px;
+      text-shadow: #3460c6;
+      font-weight: bold;
+      align-items: center;
+      text-decoration: underline;
+      
+    }
+
+    hr {
+      border: 1px solid black;
+    }
+
+    
+    footer {
+      
+      color: white;
+      
+      font-size: 25px;
+      opacity: 0;
+      border-radius: 20px;
+    }
+    footer:hover{
+      opacity: 1;
+       
+    }
+
+    footer table td {
+      padding: 5px;
+      
+    }
+
+    /* Responsive navbar */
+    @media (max-width: 700px) {
+      .menu-icon {
+        display: block;
+      }
+
+      .navbar ul {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #222;
+        flex-direction: column;
+        align-items: center;
+        display: none;
+        overflow: hidden;
+        
+        
+      }
+
+      #menu-toggle:checked ~ ul {
+        
+        display: block;
+        
+      }
+
+      .navbar li {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #444;
+      }
+
+      
+       .navbar li a {
+      padding: 10px 15px;
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      transition: background 0.3s;
+      border: 2px solid black;
+      border-radius: 10px;
+      overflow: hidden;
+      display: block;
+    }
+     /*register pages css*/
+    }
+    table{
+      width: 50%;
+      height: 200px;
+    background: linear-gradient(135deg, #6c9ad5, #c889e5);
+   border-collapse: collapse;
+    border-radius: 50px;
+    opacity: 1;
+    overflow: hidden;
+    }
+    .goback-btn{
+      width: 50%;
+      height: 50px;
+      border-radius: 20px;
+      background-color: yellowgreen;
+    }
+    .goback-btn:hover{
+      background-color: red;
+    }
+     .pay-btn{
+      width: 50%;
+      height: 50px;
+      border-radius: 20px;
+      background-color: yellowgreen;
+    }
+     .pay-btn:hover{
+      background-color: green;
+     }
+    #mode{
+      border-radius: 20px;
+      width: 60%;
+      height: 40px;
+      background-color: cornsilk;
+      color:black;
+    }
+    #mode:hover{
+      background-color: lightgreen;
+    }
+    #course{
+      border-radius: 20px;
+      width: 60%;
+      height: 40px;
+      background-color: lightyellow;
+      color: black;
+    }
+     #course:hover{
+      background-color: lightgreen;
+     }
+     .contact{
+      background-color: gray;
+     }
+
+     /*signup form css*/
+    #firstName{
+      border-radius: 20px;
+      width: 50%;
+      height: 40px;
+      
+    }
+    #firstName:hover{
+      background-color: lightgreen;
+    }
+    #lastName{
+      border-radius: 20px;
+      width: 50%;
+      height: 40px;
+      
+    }
+    #lastName:hover{
+      background-color: lightgreen;
+    }
+    #contactNo{
+      border-radius: 20px;
+      width: 50%;
+      height: 40px;
+      
+    }
+    #contactNo:hover{
+      background-color: lightgreen;
+    }
+    #email{
+      border-radius: 20px;
+      width: 50%;
+      height: 40px;
+      
+    }
+    #email:hover{
+      background-color: lightgreen;
+    }
+    #password{
+      border-radius: 20px;
+      width: 50%;
+      height: 40px;
+    }
+    #password:hover{
+     background-color: lightgreen; 
+    }
+     #confirmPassword{
+      border-radius: 20px;
+      width: 50%;
+      height: 40px;
+    }
+    #confirmPassword:hover{
+     background-color: lightgreen; 
+    }
+    .submit{
+      border-radius: 20px;
+      width: 50%;
+      height: 40px;
+       background-color: yellowgreen;
+    }
+    .submit:hover{
+      background-color: green;
+    }
+     .reset{
+      border-radius: 20px;
+      width: 50%;
+      height: 40px;
+      background-color: yellowgreen;
+    }
+    .reset:hover{
+      background-color:red;
+    }
+
+     #card-section, #upi-section, #qr-section {
+            display: none;
+        }
+
+        .paybut{
+      border-radius: 20px;
+      background-color: yellowgreen;
+        }
+       .paybut:hover{
+        background-color: green ;
+       } 
+       #cardname{
+         border-radius: 20px;
+      background-color: yellow;
+       }
+        #cardnumber{
+         border-radius: 20px;
+      background-color: yellow;
+       }
+        #exp{
+         border-radius: 20px;
+      background-color: yellow;
+       }
+        #pay{
+         border-radius: 20px;
+      background-color: yellow;
+       }
+        #cvv{
+         border-radius: 20px;
+      background-color: yellow;
+       }
+        #upiid{
+         border-radius: 20px;
+      background-color: yellow;
+       }
+      /*contact us part*/
+       .contactsub{
+        border-radius: 20px;
+        background-color: greenyellow;
+        width: 50%;
+        height: 30px;
+        
+
+       }
+       .contactsub:hover{
+        background-color: green;
+       }
+       .contactreset{
+        border-radius: 20px;
+        background-color: greenyellow;
+        
+         width: 50%;
+        height: 30px;
+       }
+        .contactreset:hover{
+          background-color: red;
+        }
+      #ln{
+      border-radius: 20px;
+      width: 50%;
+      height: 40px;
+      }
+      #ln:hover{
+      background-color: lightgreen;
+      }
+      #cn{
+      border-radius: 20px;
+      width: 50%;
+      height: 40px;
+      }
+      #cn:hover{
+      background-color: lightgreen;
+      }
+      #fn{
+      border-radius: 20px;
+      width: 50%;
+      height: 40px;
+      }
+      #fn:hover{
+      background-color: lightgreen;
+      }
+      #text{
+      border-radius: 20px;
+      width: 50%;
+      height: 40px;
+      }
+      #text:hover{
+      background-color: lightgreen;
+      }
+
+
+   /* Background overlay */
+#popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Popup box */
+.popup-box {
+    background: white;
+    padding: 25px 30px;
+    width: 350px;
+    border-radius: 15px;
+    text-align: center;
+    animation: fadeIn 0.3s ease;
+}
+
+/* OK Button */
+.popup-box button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #4b2b66;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    0% { transform: scale(0.8); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/*About us part*/
+.aboutpara{
+  font-style: italic;
+  text-shadow: #cfc0d5;
+  font-size: 30px;
+}
+
+
+.info{
+ background-color:blueviolet;
+display: flex;
+border-radius: 20px;
+
+}
+.info .info2{
+border: 1px solid;
+border: none;
+   background-color: #9babd1;
+}

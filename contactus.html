@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CONTACT US</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <div class="container">
+    <br>
+    <marquee direction="left">
+      <h1>CONTACT US WITH MESSAGE BY FORM SUBMISSION </h1>
+    </marquee>
+    <br>
+
+    <nav class="navbar">
+      <!-- Logo -->
+      <div class="logo">
+        <img src="logo.PNG" alt="MAK Tech Logo">
+        <div>
+          MAK Tech Institute <br>
+          <span>Software Training</span>
+        </div>
+      </div>
+
+      <!-- Hidden checkbox for toggle -->
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="menu-icon">&#9776;</label>
+
+      <!-- Nav links -->
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="aboutus.html">About</a></li>
+        <li><a href="signup.html">Sign up</a></li>
+        <li><a href="contactus.html">Contact</a></li>
+      </ul>
+    </nav>
+    <br><br>
+    <center><u>
+        <h2>ENTER ALL YOURS DETAILS AND CLICK ON SUBMIT </h2>
+      </u></center>
+    <br>
+    <center>
+      <!-- Added onsubmit attribute here  <td colspan="2" align="center">
+                  <input type="submit" value="SUBMIT" class="contactsub">
+                    <input type="reset" value="RESET" class="contactreset">
+                </td> -->
+      <form onsubmit="showPopup(event)">
+        <table border="5" cellspacing="10" cellpadding="10">
+          <tbody>
+            <tr>
+              <td><label for="fn">FIRST NAME:</label></td>
+              <td><input id="fn" type="text" placeholder="ENTER your FIRST NAME" name="first" required></td>
+            </tr>
+
+            <tr>
+              <td><label for="ln">LAST NAME:</label></td>
+              <td><input id="ln" type="text" placeholder="ENTER your LAST NAME" name="last" required></td>
+            </tr>
+            <tr>
+              <td><label for="cn">CONTACT NO:</label></td>
+              <td><input id="cn" type="tel" placeholder="ENTER your CONTACT NO " name="phone" pattern="[0-9]{10}"
+                  required></td>
+            </tr>
+            <tr>
+              <td><label for="email">EMAIL ID :</label></td>
+              <td><input id="email" type="email" placeholder="ENTER your EMAIL ID" name="email" required></td>
+            </tr>
+            <tr>
+              <td><label for="course">SELECT COURSE :</label></td>
+              <td>
+                <select name="course" id="course" required>
+                  <option value="" disabled selected hidden>-- SELECT YOUR COURSE --</option>
+                  <option value="dotnet">FULL STACK .NET DEVELOPMENT COURSE</option>
+                  <option value="java">FULL STACK JAVA DEVELOPMENT COURSE</option>
+                  <option value="python">FULL STACK PYTHON DEVELOPMENT COURSE</option>
+                  <option value="testing">FULL STACK SOFTWARE TESTING COURSE</option>
+                  <option value="data analysis">FULL STACK DATA ANALYSIS COURSE</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td><label for="text">YOUR MESSAGE:</label></td>
+              <td><textarea name="text" id="text" placeholder="TYPE YOUR MESSAGE HERE"></textarea></td>
+            </tr>
+            <tr>
+              <td>
+                <input type="reset" value="RESET" class="contactreset">
+              </td>
+              <td>
+                <form onsubmit="showPopup(event)">
+                  <button type="submit" class="contactsub">Submit</button>
+                </form>
+
+                <div id="popup">
+                  <div class="popup-box">
+                    <p>✅ Your message has been submitted successfully!</p>
+                    <button type="button" onclick="closePopup()">OK</button>
+
+                  </div>
+                </div>
+
+              </td>
+
+            </tr>
+          </tbody>
+        </table>
+      </form>
+    </center>
+
+
+   
+
+
+    <br>
+    <br>
+    <footer>
+      <table class="contact">
+        <tr>
+          <td>📞 Contact No: 9167517446</td>
+        </tr>
+        <tr>
+          <td>📧 Email: maktech@gmail.com</td>
+        </tr>
+        <tr>
+          <td>🏢 Address: Floor No. 901, Sector 47, Navi Mumbai, Uran</td>
+        </tr>
+      </table>
+    </footer>
+  </div>
+   <script>
+      function showPopup(event) {
+        event.preventDefault(); // stops form submission
+        document.getElementById("popup").style.display = "flex"; // show popup
+      }
+
+      function closePopup() {
+        document.getElementById("popup").style.display = "none"; // hide popup
+      }
+    </script>
+
+</body>
+
+</html>

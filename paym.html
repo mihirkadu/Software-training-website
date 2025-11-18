@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAYMENT PAGE</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            
+        }
+        table {
+            margin-top: 20px;
+        }
+       
+    </style>
+
+    <script>
+        function showPaymentFields() {
+            const payMode = document.getElementById("pay").value;
+
+            // Hide all sections first
+            document.getElementById("card-section").style.display = "none";
+            document.getElementById("upi-section").style.display = "none";
+            document.getElementById("qr-section").style.display = "none";
+
+            // Show the selected section
+            if (payMode === "debitcard") {
+                document.getElementById("card-section").style.display = "table-row-group";
+            } else if (payMode === "upi") {
+                document.getElementById("upi-section").style.display = "table-row-group";
+            } else if (payMode === "qr") {
+                document.getElementById("qr-section").style.display = "table-row-group";
+            }
+        }
+    </script>
+  <link rel="stylesheet" href="style.css">  
+</head>
+<body>
+    <br>
+    <br>
+    <div class="container">
+     <center>
+     <marquee  direction="left">  <h1>COMPLETE YOUR PAYMENT FOR COURSE</h1></marquee> 
+     </center>
+    <br>
+
+    <nav class="navbar">
+      <!-- Logo -->
+      <div class="logo">
+        <img src="logo.PNG" alt="MAK Tech Logo">
+        <div>
+          MAK Tech Institute <br>
+          <span>Software Training</span>
+        </div>
+      </div>
+
+      <!-- Hidden checkbox for toggle -->
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="menu-icon">&#9776;</label>
+
+      <!-- Nav links -->
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="aboutus.html">About</a></li>
+        <li><a href="signup.html">Sign up</a></li>
+        <li><a href="contactus.html">Contact</a></li>
+      </ul>
+    </nav>
+   
+    
+    <br>
+<center>
+    <form>
+        <table border="3" cellspacing="10" cellpadding="10">
+            <tbody>
+                <tr>
+                    <td><label for="pay">SELECT YOUR PAYMENT MODE :</label></td>
+                    <td>
+                        <select name="pay" id="pay" onchange="showPaymentFields()">
+                            <option value="" disabled selected hidden>-- SELECT PAYMENT MODE --</option>
+                            <optgroup label="Payment Options">
+                                <option value="debitcard">Debit / Credit Card</option>
+                                <option value="upi">UPI Payment</option>
+                                <option value="qr">QR Code Payment</option>
+                            </optgroup>
+                        </select>
+                    </td>
+                </tr>
+            </tbody>
+
+            <!-- Debit/Credit Card Section -->
+            <tbody id="card-section">
+                <tr>
+                    <td><label for="cardname">Cardholder Name:</label></td>
+                    <td><input type="text" id="cardname" placeholder="Enter cardholder name"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="cardnumber">Card Number:</label></td>
+                    <td><input type="text" id="cardnumber" placeholder="xxxx-xxxx-xxxx-xxxx" maxlength="16"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="exp">Expiry Date:</label></td>
+                    <td><input type="month" id="exp"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="cvv">CVV:</label></td>
+                    <td><input type="password" id="cvv" maxlength="3" placeholder="***"></td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" align="center">
+                      <a href="paysucces.html"><input type="button" value="MAKE PAYMENT" class="paybut"></a> 
+                    </td>
+                </tr>
+            </tbody>
+
+            <!-- UPI Section -->
+            <tbody id="upi-section">
+                <tr>
+                    <td><label for="upiid">Enter your UPI ID:</label></td>
+                    <td><input type="text" id="upiid" placeholder="example@upi"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                       <a href="paysucces.html"><input type="button" value="PAY USING UPI" class="paybut"></a>
+                    </td>
+                </tr>
+            </tbody>
+
+            <!-- QR Code Section -->
+            <tbody id="qr-section">
+                <tr>
+                    <td colspan="2" align="center">
+                        <p>Scan this QR Code to Complete Payment</p>
+                        <!-- You can replace this with your real QR code image -->
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/QR_code_for_mobile_English_Wikipedia.svg" 
+                             alt="QR Code" width="200" height="200">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                      <a href="paysucces.html"><input type="button" value="CONFIRM PAYMENT" class="paybut"></a>
+                    </td>
+                   
+                </tr>
+            </tbody>
+        </table>
+    </form>
+    </center>
+    
+    <br>
+    
+    <br>
+
+    <footer>
+      <table class="contact">
+        <tr><td>📞 Contact No: 9167517446</td></tr>
+        <tr><td>📧 Email: maktech@gmail.com</td></tr>
+        <tr><td>🏢 Address: Floor No. 901, Sector 47, Navi Mumbai, Uran</td></tr>
+      </table>
+    </footer>
+    </div>
+</body>
+</html>

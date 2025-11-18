@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign up </title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <marquee direction="left">
+      <h1>REGISTRATION FORM FOR EXPLORING COURSE</h1>
+    </marquee>
+
+    <br>
+
+    <nav class="navbar">
+      <!-- Logo -->
+      <div class="logo">
+        <img src="logo.PNG" alt="MAK Tech Logo">
+        <div>
+          MAK Tech Institute <br>
+          <span>Software Training</span>
+        </div>
+      </div>
+
+      <!-- Hidden checkbox for toggle -->
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="menu-icon">&#9776;</label>
+
+      <!-- Nav links -->
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="aboutus.html">About</a></li>
+        <li><a href="signup.html">Sign up</a></li>
+        <li><a href="contactus.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <br>
+
+    <center><u>
+        <h2>ENTER ALL YOURS DETAILS AND CLICK ON SUBMIT </h2>
+      </u></center>
+    <br><br>
+    <center>
+      <form action="register.html" method="get">
+
+
+        <table border="5" cellspacing="10" cellpadding="10">
+          <tbody>
+            <tr>
+              <td><label for="firstName">FIRST NAME:</label></td>
+              <td><input id="firstName" type="text" placeholder="ENTER your FIRST NAME" required></td>
+            </tr>
+            <tr>
+              <td><label for="lastName">LAST NAME:</label></td>
+              <td><input id="lastName" type="text" placeholder="ENTER your LAST NAME" required></td>
+            </tr>
+            <tr>
+              <td><label for="contactNo">CONTACT NO:</label></td>
+              <td><input id="contactNo" type="tel" placeholder="ENTER your CONTACT NO" pattern="[0-9]{10}" required>
+              </td>
+            </tr>
+            <tr>
+              <td><label for="email">EMAIL ID:</label></td>
+              <td><input id="email" type="email" placeholder="ENTER your EMAIL ID" required></td>
+            </tr>
+            <tr>
+              <td><label for="course">SELECT COURSE:</label></td>
+              <td>
+                <select id="course" required>
+                  <option value="" disabled selected hidden>-- SELECT YOUR COURSE --</option>
+                  <option value="dotnet">FULL STACK .NET DEVELOPMENT</option>
+                  <option value="java">FULL STACK JAVA DEVELOPMENT</option>
+                  <option value="python">FULL STACK PYTHON DEVELOPMENT</option>
+                  <option value="testing">FULL STACK SOFTWARE TESTING</option>
+                  <option value="data-analysis">FULL STACK DATA ANALYSIS</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td><label for="password">CREATE PASSWORD:</label></td>
+              <td><input id="password" type="password" placeholder="CREATE NEW PASSWORD" required></td>
+            </tr>
+            <tr>
+              <td><label for="confirmPassword">CONFIRM PASSWORD:</label></td>
+              <td><input id="confirmPassword" type="password" placeholder="CONFIRM YOUR PASSWORD" required></td>
+            </tr>
+            <tr>
+              <td><input type="reset" value="RESET" class="reset"></td>
+              <td><button type="submit" class="submit">SUBMIT</button></td>
+            </tr>
+
+          </tbody>
+        </table>
+      </form>
+
+      <p id="message" style="color: green; font-weight: bold;"></p>
+    </center>
+
+    <br>
+
+
+    <footer>
+      <table>
+        <tr>
+          <td>📞 Contact No: 9167517446</td>
+        </tr>
+        <tr>
+          <td>📧 Email: maktech@gmail.com</td>
+        </tr>
+        <tr>
+          <td>🏢 Address: Floor No. 901, Sector 47, Navi Mumbai, Uran</td>
+        </tr>
+      </table>
+    </footer>
+
+  </div>
+
+
+</body>
+
+</html>
